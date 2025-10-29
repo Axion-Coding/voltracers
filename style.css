@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+h1 {
+  color: #1a1a1a;
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Paragraphs */
+p {
+  margin: 15px 0;
+}
+
+/* Strong/Bold text */
+strong {
+  color: #2c3e50;
+}
+
+/* Lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #fff;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 4px solid #3498db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  border-top: 2px solid #3498db;
+  margin: 30px 0;
+}
+
+/* Emphasis */
+em {
+  font-style: italic;
+  color: #555;
+}
