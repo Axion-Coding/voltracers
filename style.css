@@ -327,7 +327,7 @@ body {
   position: relative;
   background: var(--gradient-dark);
   padding: 150px 0 80px;
-  margin-top: 60px;
+  margin-top: 70px; /* Changed from 60px to 70px for better spacing */
   text-align: center;
   overflow: hidden;
 }
@@ -522,6 +522,7 @@ body {
 /* ===================================
    QUICK LINKS SECTION
    =================================== */
+/* Better quick links styling */
 .quick-links-section {
   padding: var(--spacing-xl) 0;
   background: var(--white);
@@ -534,17 +535,19 @@ body {
 }
 
 .quick-link-card {
-  background: var(--light);
+  background: var(--white);
   border-radius: var(--radius-lg);
   padding: var(--spacing-lg);
   text-decoration: none;
   color: var(--dark);
   transition: all var(--transition-base);
-  border: 2px solid transparent;
+  border: 2px solid var(--gray-light);
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  min-height: 280px;
+  box-shadow: var(--shadow-md);
 }
 
 .quick-link-card::before {
@@ -567,11 +570,18 @@ body {
   transform: translateY(-10px);
   box-shadow: var(--shadow-xl);
   border-color: var(--primary);
+  background: var(--light);
 }
 
 .quick-link-featured {
-  background: var(--gradient-primary);
+  background: var(--gradient-primary) !important;
   color: var(--white);
+  border-color: transparent !important;
+}
+
+.quick-link-featured:hover {
+  background: var(--gradient-electric) !important;
+  transform: translateY(-10px) scale(1.05);
 }
 
 .quick-link-featured h3,
@@ -580,27 +590,45 @@ body {
 }
 
 .quick-icon {
-  font-size: 3em;
-  margin-bottom: var(--spacing-sm);
+  font-size: 3.5em;
+  margin-bottom: var(--spacing-md);
+  display: block;
 }
 
 .quick-link-card h3 {
   font-size: 1.5em;
-  margin-bottom: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
   font-weight: 700;
+  color: var(--dark);
+}
+
+.quick-link-featured h3 {
+  color: var(--white);
 }
 
 .quick-link-card p {
   color: var(--gray);
   margin-bottom: var(--spacing-md);
   flex-grow: 1;
+  line-height: 1.6;
+  font-size: 0.95em;
+}
+
+.quick-link-featured p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .link-arrow {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 700;
   color: var(--primary);
   align-self: flex-end;
+  margin-top: auto;
+  transition: transform var(--transition-fast);
+}
+
+.quick-link-card:hover .link-arrow {
+  transform: translateX(5px);
 }
 
 .quick-link-featured .link-arrow {
