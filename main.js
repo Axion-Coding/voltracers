@@ -1,6 +1,6 @@
 /* ===================================
    {VLT} VOLT RACERZ - INTERACTIVE JS
-   The most electrifying NT team website
+   Multi-Page Website
    =================================== */
 
 (function() {
@@ -29,12 +29,17 @@
     const navbar = document.querySelector('.navbar');
     const navLinks = document.querySelectorAll('.nav-links a');
     
+    // Ensure navbar stays on top
+    if (navbar) {
+      navbar.style.zIndex = '1000';
+    }
+    
     // Sticky navbar on scroll
     let lastScroll = 0;
     window.addEventListener('scroll', throttle(() => {
       const currentScroll = window.pageYOffset;
       
-      if (currentScroll > 100) {
+      if (currentScroll > 50) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
@@ -86,7 +91,13 @@
       .value-card, 
       .requirement-card,
       .hero-visual,
-      .hero-content
+      .hero-content,
+      .quick-link-card,
+      .step-card,
+      .expect-card,
+      .faq-item,
+      .mission-card,
+      .principle-item
     `);
     
     elements.forEach(el => {
@@ -180,6 +191,8 @@
   function setupParallax() {
     const parallaxElements = document.querySelectorAll('.hero, .cta-section');
     
+    if (parallaxElements.length === 0) return;
+    
     window.addEventListener('scroll', throttle(() => {
       const scrolled = window.pageYOffset;
       
@@ -217,7 +230,7 @@
   // ===================================
   // INTERACTIVE CARDS
   // ===================================
-  const cards = document.querySelectorAll('.info-card, .value-card, .requirement-card');
+  const cards = document.querySelectorAll('.info-card, .value-card, .requirement-card, .quick-link-card');
   
   cards.forEach(card => {
     card.addEventListener('mouseenter', function() {
@@ -228,33 +241,6 @@
       this.style.zIndex = '1';
     });
   });
-
-  // ===================================
-  // DYNAMIC GREETING
-  // ===================================
-  function updateGreeting() {
-    const hour = new Date().getHours();
-    const heroTitle = document.querySelector('.hero-title');
-    
-    if (!heroTitle) return;
-
-    let greeting = 'Welcome to the <span class="text-highlight">Fastest Team</span> on Nitro Type';
-    
-    if (hour >= 5 && hour < 12) {
-      greeting = 'Good Morning, <span class="text-highlight">Future Champion!</span>';
-    } else if (hour >= 12 && hour < 17) {
-      greeting = 'Good Afternoon, <span class="text-highlight">Speed Racer!</span>';
-    } else if (hour >= 17 && hour < 22) {
-      greeting = 'Good Evening, <span class="text-highlight">Elite Racer!</span>';
-    } else {
-      greeting = 'Late Night Racing? <span class="text-highlight">Let\'s Go!</span>';
-    }
-    
-    heroTitle.innerHTML = greeting;
-  }
-
-  // Uncomment to enable dynamic greeting
-  // updateGreeting();
 
   // ===================================
   // EASTER EGG - KONAMI CODE
@@ -281,20 +267,17 @@
   }
 
   function activateVoltMode() {
-    // Create lightning effect
     const body = document.body;
     body.style.animation = 'none';
     setTimeout(() => {
       body.style.animation = 'rainbow 2s ease-in-out';
     }, 10);
 
-    // Show alert
     setTimeout(() => {
       alert('⚡ ULTRA VOLT MODE ACTIVATED! ⚡\n\nYou\'ve unlocked the secret racer power!\n\nYour speed has been electrified! ⚡⚡⚡');
       body.style.animation = '';
       
-      // Add special effect to all cards
-      const allCards = document.querySelectorAll('.info-card, .value-card, .requirement-card');
+      const allCards = document.querySelectorAll('.info-card, .value-card, .requirement-card, .quick-link-card');
       allCards.forEach((card, index) => {
         setTimeout(() => {
           card.style.transform = 'scale(1.1) rotate(2deg)';
@@ -334,7 +317,7 @@
     console.log('%c⚡ VLT VOLT RACERZ ⚡', styles);
     console.log('%c🏁 Welcome to the fastest team on Nitro Type!', 'font-size: 16px; color: #00d9ff; font-weight: bold;');
     console.log('%c💡 Try the Konami code: ↑ ↑ ↓ ↓ ← → ← → B A', 'font-size: 14px; color: #6b7280;');
-    console.log('%c🔧 Interested in our code? Check out our GitHub!', 'font-size: 12px; color: #10b981;');
+    console.log('%c🔧 Built with ⚡ by the Volt Racerz team', 'font-size: 12px; color: #10b981;');
   }
 
   // ===================================
@@ -363,7 +346,6 @@
   // PERFORMANCE MONITORING
   // ===================================
   window.addEventListener('load', () => {
-    // Log page load time
     const loadTime = performance.now();
     console.log(`⚡ Page loaded in ${loadTime.toFixed(2)}ms`);
   });
