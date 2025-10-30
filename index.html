@@ -3,122 +3,311 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{VLT} Volt Racerz | Nitro Type Racing Team</title>
+  <title>{VLT} Volt Racerz | Elite Nitro Type Racing Team</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Animated Background -->
+  <div class="background-animation">
+    <div class="lightning-bolt bolt-1">⚡</div>
+    <div class="lightning-bolt bolt-2">⚡</div>
+    <div class="lightning-bolt bolt-3">⚡</div>
+    <div class="lightning-bolt bolt-4">⚡</div>
+    <div class="lightning-bolt bolt-5">⚡</div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <div class="nav-logo">⚡ VLT</div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#values">Values</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#join" class="nav-cta">Join Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <header class="site-header">
     <div class="container">
-      <div class="logo-section">
-        <h1 class="team-name">{VLT} Volt Racerz</h1>
-        <p class="tagline">Charge Up. Race Fast. Win Together.</p>
+      <div class="header-content">
+        <div class="logo-section">
+          <div class="logo-glow">
+            <span class="logo-icon">⚡</span>
+          </div>
+          <h1 class="team-name">
+            <span class="text-gradient">{VLT} Volt Racerz</span>
+          </h1>
+          <p class="tagline">Charge Up. Race Fast. Win Together.</p>
+          <div class="header-stats">
+            <div class="stat-item">
+              <div class="stat-number" data-count="150">0</div>
+              <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="500">0</div>
+              <div class="stat-label">Days Strong</div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="1000000">0</div>
+              <div class="stat-label">Races Won</div>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <div class="header-waves">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="wave-fill"></path>
+      </svg>
     </div>
   </header>
 
   <main>
-    <section class="hero">
+    <!-- Hero Section -->
+    <section class="hero" id="about">
       <div class="container">
         <div class="hero-content">
-          <h2>Welcome to Volt Racerz</h2>
-          <p class="hero-description">Join one of Nitro Type's most electrifying racing teams. Established July 31, 2023, we're building a legacy of speed, skill, and sportsmanship.</p>
+          <div class="hero-badge">
+            <span class="badge-icon">🏆</span>
+            <span>Elite Racing Team</span>
+          </div>
+          <h2 class="hero-title">Welcome to the <span class="text-highlight">Fastest Team</span> on Nitro Type</h2>
+          <p class="hero-description">Join an electrifying community of dedicated racers. Established July 31, 2023, we're not just a team—we're a family of champions pushing the limits of speed and skill.</p>
+          <div class="hero-buttons">
+            <a href="#requirements" class="btn btn-primary">View Requirements</a>
+            <a href="#join" class="btn btn-secondary">Join the Volt</a>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="about-section">
-      <div class="container">
-        <h2 class="section-title">About Our Team</h2>
-        <div class="info-cards">
-          <article class="info-card">
-            <div class="card-icon">⚡</div>
-            <h3>Established</h3>
-            <p>July 31, 2023</p>
-          </article>
-          <article class="info-card">
-            <div class="card-icon">👥</div>
-            <h3>Team Captain</h3>
-            <p>Axion</p>
-          </article>
-          <article class="info-card">
-            <div class="card-icon">🏁</div>
-            <h3>Community</h3>
-            <p>Padlet</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="values-section">
-      <div class="container">
-        <h2 class="section-title">Our Values</h2>
-        <div class="values-grid">
-          <div class="value-item">
-            <div class="value-icon">✅</div>
-            <h3>We Welcome</h3>
-            <p>Loyal, committed, and honest racers who are ready to compete and grow with our team.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🤝</div>
-            <h3>We Reward</h3>
-            <p>Dedication and consistency. Active members who meet requirements are valued and supported.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🌟</div>
-            <h3>We Build</h3>
-            <p>A friendly and fun Padlet community where racers can connect and thrive together.</p>
-          </div>
-          <div class="value-item">
-            <div class="value-icon">🚫</div>
-            <h3>We Don't Welcome</h3>
-            <p>Botters, traders, or account sharers. We maintain fair play and integrity.</p>
+        <div class="hero-visual">
+          <div class="racing-card">
+            <div class="card-shine"></div>
+            <div class="racing-stats">
+              <div class="racing-stat">
+                <span class="stat-icon">⚡</span>
+                <div>
+                  <div class="stat-value">100</div>
+                  <div class="stat-name">Races/Week</div>
+                </div>
+              </div>
+              <div class="racing-stat">
+                <span class="stat-icon">👥</span>
+                <div>
+                  <div class="stat-value">Active</div>
+                  <div class="stat-name">Community</div>
+                </div>
+              </div>
+              <div class="racing-stat">
+                <span class="stat-icon">🏅</span>
+                <div>
+                  <div class="stat-value">Elite</div>
+                  <div class="stat-name">Status</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="requirements-section">
+    <!-- Team Info Section -->
+    <section class="info-section">
       <div class="container">
-        <h2 class="section-title">Team Requirements</h2>
-        <p class="requirements-intro">We are a competitive team. If you are not able to commit to our requirements, {VLT} Volt Racerz is probably not a good fit for you.</p>
+        <div class="info-grid">
+          <article class="info-card card-electric">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-large">📅</div>
+              <h3>Established</h3>
+              <p class="card-value">July 31, 2023</p>
+              <p class="card-description">Over 500 days of racing excellence</p>
+            </div>
+          </article>
+          
+          <article class="info-card card-captain">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-large">👑</div>
+              <h3>Team Captain</h3>
+              <p class="card-value">Axion</p>
+              <p class="card-description">Leading with passion and dedication</p>
+            </div>
+          </article>
+          
+          <article class="info-card card-community">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon-large">💬</div>
+              <h3>Community</h3>
+              <p class="card-value">Padlet</p>
+              <p class="card-description">Connect, share, and grow together</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section" id="values">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-decoration">⚡</span>
+            Our Core Values
+            <span class="title-decoration">⚡</span>
+          </h2>
+          <p class="section-subtitle">What makes Volt Racerz the ultimate racing team</p>
+        </div>
         
-        <div class="requirements-list">
-          <div class="requirement-item critical">
-            <div class="requirement-header">
-              <span class="requirement-icon">🏁</span>
-              <h3>Join Day Requirement</h3>
+        <div class="values-grid">
+          <div class="value-card value-welcome">
+            <div class="value-icon-wrap">
+              <span class="value-icon">✅</span>
             </div>
-            <p class="requirement-detail"><strong>30 races required on join day or kick</strong></p>
-            <p class="requirement-description">Show your commitment from day one. Complete 30 races on the day you join the team.</p>
+            <h3>We Welcome</h3>
+            <p>Loyal, committed, and honest racers who are ready to compete and grow with our team. Your dedication fuels our success.</p>
+            <div class="value-badge">Core Value</div>
           </div>
-
-          <div class="requirement-item weekly">
-            <div class="requirement-header">
-              <span class="requirement-icon">📅</span>
-              <h3>Weekly Activity</h3>
+          
+          <div class="value-card value-reward">
+            <div class="value-icon-wrap">
+              <span class="value-icon">🎁</span>
             </div>
-            <p class="requirement-detail"><strong>100 races per week required</strong></p>
-            <p class="requirement-description">Stay active and contribute to the team. Consistent racing keeps us competitive.</p>
+            <h3>We Reward</h3>
+            <p>Dedication and consistency. Active members who meet requirements are valued and supported in their racing journey.</p>
+            <div class="value-badge">Team Spirit</div>
           </div>
-
-          <div class="requirement-item inactive">
-            <div class="requirement-header">
-              <span class="requirement-icon">⏰</span>
-              <h3>Inactivity Policy</h3>
+          
+          <div class="value-card value-build">
+            <div class="value-icon-wrap">
+              <span class="value-icon">🌟</span>
             </div>
-            <p class="requirement-detail"><strong>14 days of inactivity will auto kick</strong></p>
-            <p class="requirement-description">We value active members. If you need a break, let the captain know in advance.</p>
+            <h3>We Build</h3>
+            <p>A friendly and fun Padlet community where racers can connect, share strategies, and thrive together.</p>
+            <div class="value-badge">Community</div>
+          </div>
+          
+          <div class="value-card value-integrity">
+            <div class="value-icon-wrap">
+              <span class="value-icon">🛡️</span>
+            </div>
+            <h3>Fair Play Only</h3>
+            <p>We do not welcome or reward botters, traders, or account sharers. We maintain integrity and fair competition.</p>
+            <div class="value-badge">No Tolerance</div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
+    <!-- Requirements Section -->
+    <section class="requirements-section" id="requirements">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <span class="title-decoration">⚡</span>
+            Team Requirements
+            <span class="title-decoration">⚡</span>
+          </h2>
+          <p class="section-subtitle">What it takes to be a Volt Racer</p>
+        </div>
+
+        <div class="requirements-intro-box">
+          <div class="intro-icon">⚠️</div>
+          <div class="intro-content">
+            <h3>Competitive Team</h3>
+            <p>We are a competitive team. If you are not able to commit to our requirements, {VLT} Volt Racerz is probably not a good fit for you.</p>
+          </div>
+        </div>
+        
+        <div class="requirements-grid">
+          <div class="requirement-card req-join">
+            <div class="req-number">01</div>
+            <div class="req-icon-circle">
+              <span class="req-icon">🏁</span>
+            </div>
+            <h3>Join Day Sprint</h3>
+            <div class="req-detail">
+              <span class="req-number-big">30</span>
+              <span class="req-text">races on join day</span>
+            </div>
+            <p class="req-description">Show your commitment from day one. Complete 30 races on the day you join the team to prove you're ready for the challenge.</p>
+            <div class="req-severity critical">Critical</div>
+          </div>
+
+          <div class="requirement-card req-weekly">
+            <div class="req-number">02</div>
+            <div class="req-icon-circle">
+              <span class="req-icon">📊</span>
+            </div>
+            <h3>Weekly Goal</h3>
+            <div class="req-detail">
+              <span class="req-number-big">100</span>
+              <span class="req-text">races per week</span>
+            </div>
+            <p class="req-description">Stay active and contribute to the team. Consistent racing keeps us competitive and helps everyone improve their skills.</p>
+            <div class="req-severity important">Required</div>
+          </div>
+
+          <div class="requirement-card req-inactive">
+            <div class="req-number">03</div>
+            <div class="req-icon-circle">
+              <span class="req-icon">⏰</span>
+            </div>
+            <h3>Activity Policy</h3>
+            <div class="req-detail">
+              <span class="req-number-big">14</span>
+              <span class="req-text">days max inactivity</span>
+            </div>
+            <p class="req-description">We value active members. If you're inactive for 14 days, you'll be automatically removed. Need a break? Let Captain Axion know!</p>
+            <div class="req-severity warning">Auto-Kick</div>
+          </div>
+        </div>
+
+        <div class="requirements-footer">
+          <div class="footer-icon">💡</div>
+          <p><strong>Pro Tip:</strong> Communication is key! If you have extenuating circumstances, reach out to Captain Axion on Padlet.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="join">
+      <div class="cta-background"></div>
       <div class="container">
         <div class="cta-content">
+          <div class="cta-icon-large">⚡</div>
           <h2>Ready to Join the Volt?</h2>
-          <p>If you're committed to racing, improving your skills, and being part of an active team, we want you on {VLT} Volt Racerz!</p>
-          <p class="cta-tagline"><em>Stay active, race clean, and charge up with the Volt!</em> ⚡</p>
+          <p class="cta-description">If you're committed to racing, improving your skills, and being part of an active and supportive team, we want you on {VLT} Volt Racerz!</p>
+          
+          <div class="cta-features">
+            <div class="cta-feature">
+              <span class="feature-icon">✨</span>
+              <span>Active Community</span>
+            </div>
+            <div class="cta-feature">
+              <span class="feature-icon">🏆</span>
+              <span>Competitive Racing</span>
+            </div>
+            <div class="cta-feature">
+              <span class="feature-icon">🤝</span>
+              <span>Supportive Team</span>
+            </div>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="https://www.nitrotype.com/team/VLT" class="btn btn-large btn-glow">Join on Nitro Type</a>
+            <a href="#requirements" class="btn btn-large btn-outline">Review Requirements</a>
+          </div>
+
+          <p class="cta-tagline">
+            <em>Stay active, race clean, and charge up with the Volt!</em> ⚡
+          </p>
         </div>
       </div>
     </section>
@@ -126,9 +315,45 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2023-2025 {VLT} Volt Racerz | Nitro Type Racing Team</p>
-      <p class="footer-note">Built for speed. Powered by dedication.</p>
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="footer-icon">⚡</span>
+            <span class="footer-name">{VLT} Volt Racerz</span>
+          </div>
+          <p class="footer-tagline">Built for speed. Powered by dedication.</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#values">Values</a></li>
+              <li><a href="#requirements">Requirements</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-column">
+            <h4>Community</h4>
+            <ul>
+              <li><a href="#">Padlet</a></li>
+              <li><a href="https://www.nitrotype.com/team/VLT">Nitro Type</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023-2025 {VLT} Volt Racerz | All Rights Reserved</p>
+        <p class="footer-est">Established July 31, 2023</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <span>↑</span>
+  </button>
 </body>
 </html>
