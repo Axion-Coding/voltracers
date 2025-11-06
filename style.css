@@ -1527,6 +1527,7 @@ body {
   grid-template-columns: 2fr 1fr 1fr;
   gap: var(--spacing-xl);
   margin-bottom: var(--spacing-lg);
+  align-items: start;
 }
 
 .footer-brand {
@@ -1560,10 +1561,18 @@ body {
   font-style: italic;
 }
 
+.footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  grid-column: 2 / 4;
+}
+
 .footer-column h4 {
   color: var(--electric);
   margin-bottom: var(--spacing-sm);
   font-size: 1.2em;
+  font-weight: 700;
 }
 
 .footer-column ul {
@@ -1577,10 +1586,12 @@ body {
   color: var(--gray-light);
   text-decoration: none;
   transition: color var(--transition-fast);
+  font-size: 0.95em;
 }
 
 .footer-column a:hover {
   color: var(--electric);
+  padding-left: 5px;
 }
 
 .footer-bottom {
@@ -1598,6 +1609,30 @@ body {
   opacity: 0.7;
 }
 
+/* Responsive footer */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: var(--spacing-xs);
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+}
 /* ===================================
    SCROLL TO TOP BUTTON
    =================================== */
