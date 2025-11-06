@@ -131,9 +131,9 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(15, 15, 30, 0.95);
+  background: rgba(15, 15, 30, 0.98);
   backdrop-filter: blur(10px);
-  z-index: 1000;
+  z-index: 1000 !important;
   padding: var(--spacing-sm) 0;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
   transition: all var(--transition-base);
@@ -217,8 +217,9 @@ body {
   position: relative;
   background: var(--gradient-dark);
   padding: 150px 0 80px;
-  margin-top: 60px;
+  margin-top: 70px;
   overflow: hidden;
+  z-index: 1;
 }
 
 .site-header::before {
@@ -327,9 +328,10 @@ body {
   position: relative;
   background: var(--gradient-dark);
   padding: 150px 0 80px;
-  margin-top: 70px; /* Changed from 60px to 70px for better spacing */
+  margin-top: 70px;
   text-align: center;
   overflow: hidden;
+  z-index: 1;
 }
 
 .page-header::before {
@@ -522,10 +524,9 @@ body {
 /* ===================================
    QUICK LINKS SECTION
    =================================== */
-/* Better quick links styling */
 .quick-links-section {
   padding: var(--spacing-xl) 0;
-  background: var(--white);
+  background: var(--light);
 }
 
 .quick-links-grid {
@@ -720,6 +721,7 @@ body {
   text-align: center;
   margin-bottom: var(--spacing-xl);
 }
+
 .section-title {
   font-size: 3.5em;
   font-weight: 900;
@@ -729,6 +731,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: var(--spacing-sm);
+  text-align: center;
 }
 
 .title-decoration {
@@ -1057,7 +1060,6 @@ body {
   transform: scaleX(0);
   transition: transform var(--transition-base);
 }
-
 .requirement-card:hover::before {
   transform: scaleX(1);
 }
@@ -1354,7 +1356,234 @@ body {
 }
 
 /* ===================================
-   STEPS SECTION
+   SIMPLIFIED JOIN PAGE
+   =================================== */
+
+.join-hero {
+  position: relative;
+  background: var(--gradient-dark);
+  padding: 180px 0 100px;
+  margin-top: 70px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.join-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 217, 255, 0.15) 0%, transparent 60%);
+}
+
+.join-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.join-icon {
+  font-size: 5em;
+  margin-bottom: var(--spacing-md);
+  animation: pulse 2s infinite;
+}
+
+.join-hero h1 {
+  font-size: 3.5em;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+}
+
+.join-description {
+  font-size: 1.3em;
+  color: var(--gray-light);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+}
+
+.join-benefits {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.benefit-icon {
+  font-size: 1.5em;
+}
+
+.join-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--primary);
+  transform: translateY(-5px);
+}
+
+/* Simple Steps Section */
+.join-steps-simple {
+  padding: var(--spacing-xl) 0;
+  background: var(--light);
+}
+
+.simple-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.simple-step {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.simple-step:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary);
+}
+
+.step-num {
+  width: 60px;
+  height: 60px;
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 900;
+  margin: 0 auto var(--spacing-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.simple-step h3 {
+  font-size: 1.8em;
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.simple-step p {
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-md);
+  font-size: 1.05em;
+}
+
+.simple-link {
+  display: inline-block;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.simple-link:hover {
+  color: var(--electric);
+  transform: translateX(5px);
+}
+
+/* Quick Info Section */
+.join-quick-info {
+  padding: var(--spacing-xl) 0;
+  background: var(--white);
+}
+
+.join-quick-info .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.info-box {
+  background: var(--light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border-left: 4px solid var(--info);
+}
+
+.info-box-primary {
+  background: var(--gradient-primary);
+  color: var(--white);
+  border-left: 4px solid var(--white);
+}
+
+.info-box h3 {
+  font-size: 1.5em;
+  margin-bottom: var(--spacing-sm);
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.info-box-primary h3 {
+  color: var(--white);
+}
+
+.info-box p {
+  color: var(--gray);
+  line-height: 1.7;
+  font-size: 1.05em;
+}
+
+.info-box-primary p {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.info-box a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.info-box-primary a {
+  color: var(--white);
+  text-decoration: underline;
+}
+
+.info-box a:hover {
+  color: var(--electric);
+}
+
+.info-box-primary a:hover {
+  text-decoration: none;
+}
+
+/* ===================================
+   STEPS SECTION (OLD VERSION)
    =================================== */
 .steps-section {
   padding: var(--spacing-xl) 0;
@@ -1609,30 +1838,6 @@ body {
   opacity: 0.7;
 }
 
-/* Responsive footer */
-@media (max-width: 768px) {
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-  
-  .footer-links {
-    grid-template-columns: 1fr 1fr;
-    grid-column: 1;
-  }
-  
-  .footer-bottom {
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    text-align: center;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-links {
-    grid-template-columns: 1fr;
-  }
-}
 /* ===================================
    SCROLL TO TOP BUTTON
    =================================== */
@@ -1687,6 +1892,11 @@ body {
 
 /* Tablet */
 @media (max-width: 1024px) {
+  :root {
+    --spacing-xl: 60px;
+    --spacing-lg: 36px;
+  }
+
   .team-name {
     font-size: 3.5em;
   }
@@ -1727,12 +1937,26 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .simple-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .join-quick-info .container {
+    grid-template-columns: 1fr;
+  }
+
   .mission-grid {
     grid-template-columns: 1fr;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1;
   }
 }
 
@@ -1744,6 +1968,11 @@ body {
 
   .site-header, .page-header {
     padding: 120px 0 60px;
+    margin-top: 60px;
+  }
+
+  .join-hero {
+    padding: 140px 0 80px;
   }
 
   .logo-glow {
@@ -1778,6 +2007,10 @@ body {
     font-size: 2em;
   }
 
+  .join-hero h1 {
+    font-size: 2.5em;
+  }
+
   .section-title {
     font-size: 2em;
   }
@@ -1786,17 +2019,26 @@ body {
     display: none;
   }
 
-  .hero-buttons, .cta-buttons, .final-cta-buttons {
+  .hero-buttons, .cta-buttons, .final-cta-buttons, .join-actions {
     flex-direction: column;
   }
 
-  .btn {
+  .btn, .btn-large {
     width: 100%;
     text-align: center;
   }
 
   .quick-links-grid, .steps-grid {
     grid-template-columns: 1fr;
+  }
+
+  .quick-link-card {
+    min-height: auto;
+  }
+
+  .join-benefits {
+    flex-direction: column;
+    align-items: center;
   }
 
   .cta-section h2 {
@@ -1819,10 +2061,19 @@ body {
     bottom: 20px;
     right: 20px;
   }
+
+  .requirements-intro-box {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /* Small Mobile */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
   .team-name {
     font-size: 2em;
   }
@@ -1831,12 +2082,24 @@ body {
     font-size: 1.8em;
   }
 
+  .join-hero h1 {
+    font-size: 2em;
+  }
+
+  .join-icon {
+    font-size: 4em;
+  }
+
   .section-title {
     font-size: 1.8em;
   }
 
   .cta-section h2 {
     font-size: 2em;
+  }
+
+  .footer-links {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1867,6 +2130,12 @@ body {
   background: var(--gradient-electric);
 }
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) var(--dark);
+}
+
 /* ===================================
    SELECTION STYLES
    =================================== */
@@ -1874,3 +2143,31 @@ body {
   background: var(--electric);
   color: var(--white);
 }
+
+::-moz-selection {
+  background: var(--electric);
+  color: var(--white);
+}
+
+/* ===================================
+   ACCESSIBILITY
+   =================================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+a:focus,
+button:focus {
+  outline: 3px solid var(--electric);
+  outline-offset: 2px;
+}
+
+/* ===================================
+   END OF STYLES
+   =================================== */
